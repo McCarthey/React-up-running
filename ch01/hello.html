@@ -13,8 +13,11 @@
   <script src="https://cdn.bootcss.com/react/0.14.7/react.js"></script>
   <script src="https://cdn.bootcss.com/react/0.14.7/react-dom.js"></script>
   <script>
+    let obj = {
+      id: 'my-heading'
+    }
     ReactDOM.render(
-      React.DOM.h1(null, "Hello world!"),
+      React.DOM.h1(obj, React.DOM.span(null, "Hello"), " world!"),
       document.getElementById('app')
     )
   </script>
