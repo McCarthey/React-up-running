@@ -12,13 +12,20 @@
 <body>
   <script src="https://cdn.bootcss.com/react/0.14.7/react.js"></script>
   <script src="https://cdn.bootcss.com/react/0.14.7/react-dom.js"></script>
-  <script>
-    let obj = {
-      id: 'my-heading'
-    }
+  <script src="https://cdn.bootcss.com/babel-core/5.8.34/browser.js"></script>
+  <script type="text/babel">
+    // let obj = {
+    //   id: 'my-heading'
+    // }
+    // ReactDOM.render(
+    //   React.DOM.h1(obj, React.DOM.span(null, React.DOM.em(null, "Hell"), "o"), " world!"),
+    //   document.getElementById('app')
+    // )
     ReactDOM.render(
-      React.DOM.h1(obj, React.DOM.span(null, "Hello"), " world!"),
-      document.getElementById('app')
+      <h1 id="my-heading">
+        <span>Hell<em>o</em></span> world!
+      </h1>,
+      document.getElementById("app")
     )
   </script>
 </body>
