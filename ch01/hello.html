@@ -12,21 +12,27 @@
 <body>
   <script src="https://cdn.bootcss.com/react/0.14.7/react.js"></script>
   <script src="https://cdn.bootcss.com/react/0.14.7/react-dom.js"></script>
-  <script src="https://cdn.bootcss.com/babel-core/5.8.34/browser.js"></script>
-  <script type="text/babel">
-    // let obj = {
-    //   id: 'my-heading'
-    // }
-    // ReactDOM.render(
-    //   React.DOM.h1(obj, React.DOM.span(null, React.DOM.em(null, "Hell"), "o"), " world!"),
-    //   document.getElementById('app')
-    // )
+  <!-- <script src="https://cdn.bootcss.com/babel-core/5.8.34/browser.js"></script> -->
+  <!-- <script type="text/babel"> -->
+  <script>
+    // class,for是js关键字，不可以直接写在jsx中
+    // style也必须写成对象形式，避免使用字符串的方式，可以减少XSS攻击的威胁
+    let obj = {
+      style: {
+        background: 'black',
+        color: 'white'
+      }
+    }
     ReactDOM.render(
-      <h1 id="my-heading">
-        <span>Hell<em>o</em></span> world!
-      </h1>,
-      document.getElementById("app")
+      React.DOM.h1(obj, "Hello world"),
+      document.getElementById('app')
     )
+    // ReactDOM.render(
+    //   <h1 id="my-heading">
+    //     <span>Hell<em>o</em></span> world!
+    //   </h1>,
+    //   document.getElementById("app")
+    // )
   </script>
 </body>
 
