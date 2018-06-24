@@ -15,24 +15,17 @@
   <!-- <script src="https://cdn.bootcss.com/babel-core/5.8.34/browser.js"></script> -->
   <!-- <script type="text/babel"> -->
   <script>
-    // class,for是js关键字，不可以直接写在jsx中，要写成className，htmlFor
-    // style也必须写成对象形式，避免使用字符串的方式，可以减少XSS攻击的威胁
-    let obj = {
-      style: {
-        background: 'black',
-        color: 'white'
+    // 创建组件
+    var Component = React.createClass({
+      render: function () {
+        return React.DOM.span(null, "I'm so custom")
       }
-    }
+    });
+    // 挂载DOM
     ReactDOM.render(
-      React.DOM.h1(obj, "Hello world"),
+      React.createElement(Component),
       document.getElementById('app')
     )
-    // ReactDOM.render(
-    //   <h1 id="my-heading">
-    //     <span>Hell<em>o</em></span> world!
-    //   </h1>,
-    //   document.getElementById("app")
-    // )
   </script>
 </body>
 
