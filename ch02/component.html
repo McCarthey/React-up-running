@@ -15,15 +15,19 @@
   <!-- <script src="https://cdn.bootcss.com/babel-core/5.8.34/browser.js"></script> -->
   <!-- <script type="text/babel"> -->
   <script>
-    // 创建组件
+    // 创建组件 所有属性都可以通过this.props对象获取
+    // 注：this.props须视为只读属性，从父组件传递到子组件，事实上Object.isFrozen(this.props) 为 true
     var Component = React.createClass({
       render: function () {
-        return React.DOM.span(null, "I'm so custom")
+        console.log()
+        return React.DOM.span(null, "My name is " + this.props.name);
       }
     });
     // 挂载DOM
     ReactDOM.render(
-      React.createElement(Component),
+      React.createElement(Component, {
+        name: 'Ryan'
+      }),
       document.getElementById('app')
     )
   </script>
