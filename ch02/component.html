@@ -18,8 +18,17 @@
     // 创建组件 所有属性都可以通过this.props对象获取
     // 注：this.props须视为只读属性，从父组件传递到子组件，事实上Object.isFrozen(this.props) 为 true
     var Component = React.createClass({
-      propTypes:{
-        name: React.PropTypes.string.isRequired,
+      propTypes: {
+        firstName: React.PropTypes.string.isRequired,
+        middleName: React.PropTypes.string,
+        familyName: React.PropTypes.string.isRequired,
+        address: React.PropTypes.string,
+      },
+      getDefaultProps: function(){
+        return {
+          middleName:'',
+          address: 'n/a',
+        }
       },
       render: function () {
         console.log()
