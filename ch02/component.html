@@ -24,7 +24,7 @@
         familyName: React.PropTypes.string.isRequired,
         address: React.PropTypes.string,
       },
-      getDefaultProps: function(){
+      getDefaultProps: function(){ // 用于避免编写没有提供这些属性时的防御性代码
         return {
           middleName:'',
           address: 'n/a',

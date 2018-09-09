@@ -22,4 +22,4 @@
 
 - shouldComponentUpdate(newProps, newState)
 
-  这个方法在componentWillUpdate()之前触发，给你有一个机会返回false以取消更新
+  这个方法在componentWillUpdate()之前触发，给你有一个机会返回false以取消更新，这意味着render()方法将不会被调用
