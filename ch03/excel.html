@@ -24,7 +24,8 @@
       ["The Hobbit", "J. R. R. Tolkien", "English", "1937", "100 million"],
       ["She: A History of Adventure", "H. Rider Haggard", "English", "1887", "100 million"]
     ];
-
+    
+    // 注意key只需要保证在当前循环中唯一，而不是整个应用中唯一
     var Excel = React.createClass({
       displayName: 'Excel',
       getInitialState: function () {
